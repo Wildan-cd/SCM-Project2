@@ -18,24 +18,24 @@
     <a href="{{ route('index') }}">Home</a> &rsaquo; Products
   </div>
 
-  {{-- <div class="Products">
+  <div class="Products">
     <div class="container">
-        <div class="produk-box"> --}}
-            <div class="my-3 d-flex flex-wrap gap-2">
+        <div class="produk-box">
+            
             <a href="{{ route('landing.produk') }}" class="btn {{ request('kategori') ? 'btn-outline-warning' : 'btn-warning' }}">Semua Produk</a>
         <a href="{{ route('landing.produk', ['kategori' => 'Diskon']) }}" class="btn btn-outline-warning">Diskon</a>
         @foreach (['Lampu Depan', 'Lampu Belakang', 'Sein', 'Spakbor', 'Keranjang', 'Tangki', 'Footstep'] as $cat)
             <a href="{{ route('landing.produk', ['kategori' => $cat]) }}" class="btn btn-outline-warning">{{ $cat }}</a>
         @endforeach
         </div>
-    {{-- </div>
-  </div> --}}
+    </div>
+  </div>
 
   <div class="row">
     @foreach ($produk as $produk)
   <div class="product-grid">
     <div class="product-card">
-      <img src="{{ asset('public/'.$produk->gambar) }}" alt="{{ $produk->nama_produk }}"/>
+      <img src="{{ asset('/'.$produk->gambar) }}" alt="{{ $produk->nama_produk }}"/>
       <div class="product-title">{{ $produk->nama_produk }}</div>
       <a href="{{ route('landing.detail', $produk->id) }}" class="btn">Detail</a>
     </div>

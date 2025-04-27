@@ -10,9 +10,14 @@
         <h2>Ulasan Pelanggan</h2>
         <a href="{{ route('landing.form_ulasan') }}" class="btn">+ Add Review</a>
     </div>
-
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
 
     <div class="ulasan-grid">
+        
         @foreach ($data as $item)
         
         <div class="ulasan-item">
