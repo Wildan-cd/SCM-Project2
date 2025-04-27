@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+}
+
+/* Header */
+header {
+    background: #333333;
+    color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px #0000004d;
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+.tentang {
+    color: #f39c12;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* About Section */
+.about-top {
+    background: linear-gradient(#00000099, #00000099),
+        url("../images/aboutus1.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #ffffff;
+    padding: 50px;
+}
+
+.about-top h1 {
+    font-size: 5em;
+    margin-bottom: 12px;
+    animation: fadeInDown 1s ease forwards;
+}
+
+/* About Us Section */
+.tentang-section {
+    padding: 40px;
+    background-color: #ffffff;
+    align-items: center;
+}
+
+.tentang-container {
+    text-align: justify;
+    padding: 20px;
+    max-width: 1000px;
+}
+
+.tentang-container h2 {
+    font-size: 36px;
+}
+
+.tentang-container p {
+    font-size: 16px;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #eeeeee;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.contact-info {
+    width: 60%;
+    padding-right: 30px;
+}
+
+.contact-info h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-item .contact-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.contact-item div {
+    font-size: 16px;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.social .icons {
+    margin-top: 10PX;
+    display: flex;
+    gap: 15px;
+}
+
+.social .icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social .icons img:hover {
+    transform: scale(1.1);
+}
+
+.contact-extra {
+    width: 35%;
+    border-left: 1px solid #5555559f;
+    padding-left: 30px;
+}
+
+.contact-extra h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.marketplace-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.marketplace-icons img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.marketplace-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Location Section */
+.location-section {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.location-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
