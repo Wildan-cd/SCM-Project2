@@ -129,67 +129,6 @@
         </div>
     </section>
 
-    <section class="contact-section">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h2>Kontak Kami</h2>
-                <p>Untuk lebih detail terkait produk ataupun lainnya, anda bisa menghubungi atau mengunjungi kami di
-                    toko offline.</p>
-
-                <div class="contact-item">
-                    <img src="images/location.png" alt="Location" class="contact-icon">
-                    <div>
-                        <strong>VISIT US</strong><br>
-                        Jl. Bukit Berbunga No.115, Sidomulyo, Kec. Batu, Kota Batu, Jawa Timur 65317
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <img src="images/phone.png" alt="Phone" class="contact-icon">
-                    <div>
-                        <strong>CALL US</strong><br>
-                        082234322320
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <img src="images/email.png" alt="Email" class="contact-icon">
-                    <div>
-                        <strong>EMAIL US</strong><br>
-                        kwbmotorclassic@gmail.com
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="social">
-                    <h3>FOLLOW US</h3>
-                    <div class="icons">
-                        <a href="https://www.instagram.com/septaclassicmotor/" target="_blank"><img src="images/instagram.png"
-                                alt="Instagram"></a>
-                        <a href="https://www.tiktok.com/@septaclassic" target="_blank"><img src="images/tiktok.png" alt="TikTok"></a>
-                        <a href="https://web.facebook.com/septaclassicmotor" target="_blank"><img src="images/facebook.png"
-                                alt="Facebook"></a>
-                        <a href="https://wa.me/6282234322320" target="_blank"><img src="images/whatsapp.png" alt="Whatsapp"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-extra">
-                <h3>Marketplace</h3>
-                <div class="marketplace-icons">
-                    <a href="https://shopee.co.id/kwbmotorclassic" target="_blank" rel="noopener">
-                        <img src="images/shopee.png" alt="Shopee">
-                    </a>
-                    
-                    <a href="https://www.tokopedia.com/septa-classic-motor" target="_blank" rel="noopener">
-                        <img src="images/tokopedia.png" alt="Tokopedia">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     @include('components.footer')
 
     <script src="/scm_new/js/script1.js"></script>
