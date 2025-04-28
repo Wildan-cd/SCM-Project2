@@ -28,7 +28,7 @@
                         <i class="fas fa-shopping-cart"></i> Order via WhatsApp
                       </a>
                     </div>
-                  </div>
+                </div>
 
             </div>
         </div>
