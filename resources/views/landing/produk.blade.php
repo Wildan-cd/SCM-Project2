@@ -43,9 +43,7 @@
   @endforeach
 </div>
 
-  <footer>
-    <p>&copy; 2015 - Present Septa Classic Motor. Built for the Classics.</p>
-  </footer>
+  @include('components.footer')
   <script src="js/produk.js"></script>
 
 </body>
