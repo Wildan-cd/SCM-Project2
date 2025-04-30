@@ -90,6 +90,15 @@ header nav ul li a:hover {
     animation: fadeInDown 1s ease forwards;
 }
 
+.breadcrumb {
+    padding: 1rem;
+    font-size: 1rem;
+}
+.breadcrumb a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
 /* Ulasan Pelanggan Section */
 .daftar-ulasan {
     padding: 20px;
@@ -111,6 +120,7 @@ header nav ul li a:hover {
     flex: 1 1 auto;
     font-size: 2.5em;
     text-align: center;
+    margin-left: 140px;
 }
 
 .btn {
@@ -155,6 +165,14 @@ header nav ul li a:hover {
 .ulasan-item:hover {
     transform: scale(1.02);
 }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 1rem; 
+    padding: 2rem 1rem;
+  }
 
 .info {
     margin-bottom: 0.6rem;

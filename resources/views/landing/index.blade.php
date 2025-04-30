@@ -38,26 +38,23 @@
         <h2>Produk Unggulan</h2>
         <div class="bestSeller-grid">
             <img src="images/produk3.webp" alt="Produk Unggulan 1">
-            <img src="images/produk4.jpg" alt="Produk Unggulan 2">
-            <img src="images/produk6.jpg" alt="Produk Unggulan 3">
-            <img src="images/produk7.jpeg" alt="Produk Unggulan 4">
+            <img src="images/unggulan1.jpg" alt="Produk Unggulan 2">
+            <img src="images/unggulan2.jpg" alt="Produk Unggulan 3">
+            <img src="images/unggulan3.jpg" alt="Produk Unggulan 4">
         </div>
     </section>
 
     <section class="collection" id="collection">
         <h2>Rawat, Bangun, Modifikasi - Rawat Untuk Motor Klasikmu</h2>
         <p>Kami hadir untuk pecinta motor klasik yang ingin kendaraannya tetap prima dan otentik. Mulai dari servis, restorasi, hingga part ori dan kustom - semua dikerjakan dengan penuh ketelitian dan cinta terhadap detail klasik.</p>
-        <a href="#" class="btn">Selengkapnya</a>
     </section>
 
     <section class="contact-preview">
         <h2>Siap Jadi Bintang di Jalanan?</h2>
         <p>Dari pecinta motor klasik untuk sesama penggemar jalanan!</p>
-        <a href="#" class="btn">Gaskeun Sekarang</a>
+        <a href="https://wa.me/6282234322320" class="btn">Gaskeun Sekarang</a>
     </section>
 
     @include('components.footer')
-
-    <script src="js/script1.js"></script>
 </body>
 </html>
