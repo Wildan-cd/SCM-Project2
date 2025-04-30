@@ -2,9 +2,13 @@
 @include('components.navbar')
 
 <section class="ulasan-section" id="ulasan">
-    <h1>Ulasan</h1>
+    <h1>Review</h1>
 </section>
-    
+
+    <div class="breadcrumb">
+        <a href="{{ route('index') }}">Home</a> &rsaquo; Review
+    </div>
+
 <section class="daftar-ulasan">
     <div class="header-ulasan">
         <h2>Ulasan Pelanggan</h2>

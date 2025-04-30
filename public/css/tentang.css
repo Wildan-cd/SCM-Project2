@@ -91,6 +91,16 @@ header nav ul li a:hover {
     animation: fadeInDown 1s ease forwards;
 }
 
+.breadcrumb {
+    padding: 1rem;
+    font-size: 1rem;
+    background: #ffffff;
+}
+.breadcrumb a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
 /* About Us Section */
 .tentang-section {
     padding: 40px;
@@ -100,8 +110,9 @@ header nav ul li a:hover {
 
 .tentang-container {
     text-align: justify;
-    padding: 20px;
-    max-width: 1000px;
+    padding: 2px;
+    max-width: auto;
+    margin-bottom: 20px;
 }
 
 .tentang-container h2 {

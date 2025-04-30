@@ -38,9 +38,9 @@
         <h2>Produk Unggulan</h2>
         <div class="bestSeller-grid">
             <img src="images/produk3.webp" alt="Produk Unggulan 1">
-            <img src="images/produk4.jpg" alt="Produk Unggulan 2">
-            <img src="images/produk6.jpg" alt="Produk Unggulan 3">
-            <img src="images/produk7.jpeg" alt="Produk Unggulan 4">
+            <img src="images/unggulan1.jpg" alt="Produk Unggulan 2">
+            <img src="images/unggulan2.jpg" alt="Produk Unggulan 3">
+            <img src="images/unggulan3.jpg" alt="Produk Unggulan 4">
         </div>
     </section>
 

@@ -5,11 +5,11 @@
     </div>
     <nav>
         <ul>
-            <li><a href="{{ route('index') }}" class="beranda">Beranda</a></li>
-            <li><a href="{{ route('landing.produk') }}" class="produk">Produk</a></li>
-            <li><a href="{{ route('landing.layanan') }}" class="layanan">Layanan</a></li>
-            <li><a href="{{ route('landing.tentang') }}" class="tentang">Tentang</a></li>
-            <li><a href="{{ route('landing.ulasan') }}" class="ulasan">Ulasan</a></li>
+            <li><a href="{{ route('index') }}" class="beranda">Home</a></li>
+            <li><a href="{{ route('landing.produk') }}" class="produk">Products</a></li>
+            <li><a href="{{ route('landing.layanan') }}" class="layanan">Service</a></li>
+            <li><a href="{{ route('landing.tentang') }}" class="tentang">About</a></li>
+            <li><a href="{{ route('landing.ulasan') }}" class="ulasan">Review</a></li>
         </ul>
     </nav>
 </header>

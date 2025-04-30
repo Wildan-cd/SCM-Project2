@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,16 +14,20 @@
         <h1>About Us</h1>
     </section>
 
+    <div class="breadcrumb">
+        <a href="{{ route('index') }}">Home</a> &rsaquo; About
+    </div>
+
     <section class="tentang-section" id="tentang_kami">
         <div class="tentang-container">
             <h2>Tentang Septa Classic Motor</h2>
             <p>Bengkel spesialis yang menyediakan beragam suku cadang (sparepart) dan komponen variasi untuk sepeda
                 motor, dengan penekanan khusus pada unit-unit Honda klasik seperti CB, GL Series, Megapro, dan Tiger.
                 Setiap produk yang kami tawarkan dipilih secara cermat untuk memastikan kualitas, ketahanan, serta
-                kesesuaian dengan karakter motor klasik pelanggan kami. <br><br> Selain penyediaan komponen, kami juga
+                kesesuaian dengan karakter motor klasik pelanggan kami. <br> Selain penyediaan komponen, kami juga
                 menawarkan layanan profesional untuk berbagai jenis proyek sepeda motor, meliputi proses restorasi guna
                 mengembalikan tampilan dan performa kendaraan ke kondisi optimalnya, maupun modifikasi yang disesuaikan
-                dengan selera serta kebutuhan estetika dan fungsional pemilik kendaraan. <br><br> Dengan dukungan tenaga
+                dengan selera serta kebutuhan estetika dan fungsional pemilik kendaraan. <br> Dengan dukungan tenaga
                 ahli berpengalaman dan komitmen terhadap kualitas, Septa Classic Motor hadir sebagai mitra terpercaya
                 bagi para pecinta motor klasik yang menginginkan hasil pengerjaan yang presisi, rapi, dan bernilai
                 tinggi.</p>
