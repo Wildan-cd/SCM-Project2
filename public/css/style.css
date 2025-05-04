@@ -250,15 +250,6 @@ header nav ul li a:hover {
     font-size: 1.2em;
 }
 
-/* Footer */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-}
-
 /* Animations */
 @keyframes fadeInDown {
     from {opacity: 0; transform: translateY(-30px);}

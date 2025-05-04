@@ -1,0 +1,42 @@
+.footer {
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 40px 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    margin-bottom: 40px;
+  }
+  
+  .social-media {
+    margin-bottom: 25px;
+  }
+  
+  .social-media a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .social-media i {
+    margin-right: 5px;
+  }
+  
+  .store-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid white;
+    margin-top: 30px;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.6;
+  }
+  
