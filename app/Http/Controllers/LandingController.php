@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\produk;
 use App\Models\ulasan;
 use Carbon\Carbon;
+use Illuminate\Container\Attributes\DB;
 use Illuminate\Http\Request;
+
+use function Laravel\Prompts\search;
 
 class LandingController extends Controller
 {
@@ -35,7 +38,7 @@ class LandingController extends Controller
             }
         }
 
-        $produk = $query->get();
+        $produk = $query->paginate(8);
         return view('landing.produk', compact('produk', 'kategori'));
     }
 
@@ -65,6 +68,15 @@ class LandingController extends Controller
     {
         return view('landing.form_ulasan');
     }
+
+    // public function search(Request $request)
+    // {
+    //     $search = $request->search;
+    //     $result = DB::table('produk')
+    //     ->where('nama_produk','like',"%",$search,"%")
+    //     ->paginate();
+    //     return view('landing.produk',['show'=>$result]);
+    // }
 
     /**
      * Show the form for creating a new resource.
