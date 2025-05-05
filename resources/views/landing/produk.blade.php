@@ -6,6 +6,8 @@
   <title>Septa Classic Motor</title>
   <link rel="stylesheet" href="css/produk.css">
   <link rel="shortcut icon" href="images/logo.png" type="images/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
 </head>
 
@@ -18,7 +20,15 @@
   <div class="breadcrumb">
     <a href="{{ route('index') }}">Home</a> &rsaquo; Products
   </div>
-
+  {{-- <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <form action="{{ route('landing.produk') }}" class="d-flex" role="search" method="GET">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav> --}}
+  
   <div class="Products">
     <div class="container">
       <div class="produk-category-wrapper">
@@ -34,21 +44,23 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="product-grid">
-    @foreach ($produk as $produk)
-      <div class="product-card">
-        <img src="{{ asset('/'.$produk->gambar) }}" alt="{{ $produk->nama_produk }}" />
-        <div class="product-title">{{ $produk->nama_produk }}</div>
-        <a href="{{ route('landing.detail', $produk->id) }}" class="btn">Detail</a>
+  <div class="row container mt-3">
+      <div class="product-grid">
+        @foreach ($produk as $item)
+        <div class="product-card">
+          <img src="{{ asset('/'.$item->gambar) }}" alt="{{ $item->nama_produk }}" />
+          <div class="product-title">{{ $item->nama_produk }}</div>
+          <a href="{{ route('landing.detail', $item->id) }}" class="btn btn-warning">Detail</a>
+        </div>
+        @endforeach
       </div>
-      @endforeach
+      <div class="d-flex justify-content-center mt-4">
+        {{ $produk->links('pagination::bootstrap-5') }}
+      </div>
     </div>
-  </div>
-
-  @include('components.footer')
-  <script src="{{ asset('js/script.js') }}"></script>
-
-</body>
+    @include('components.footer')
+    <script src="{{ asset('js/script.js') }}"></script>
+    
+  </body>
 
 </html>
