@@ -26,6 +26,38 @@ class ProdukSeeder extends Seeder
                 'kategori' => 'Lampu Depan',
                 'is_diskon' => true,
             ],
+            [
+                'nama_produk' => 'Produk 1',
+                'gambar' => 'images/produk1.jpg',
+                'deskripsi' => 'Ini Deskripsi Produk 1.',
+                'harga' => 50000,
+                'kategori' => 'Sein',
+                'is_diskon' => false,
+            ],
+            [
+                'nama_produk' => 'Produk 1',
+                'gambar' => 'images/produk1.jpg',
+                'deskripsi' => 'Ini Deskripsi Produk 1.',
+                'harga' => 50000,
+                'kategori' => 'Sein',
+                'is_diskon' => false,
+            ],
+            [
+                'nama_produk' => 'Produk 1',
+                'gambar' => 'images/produk1.jpg',
+                'deskripsi' => 'Ini Deskripsi Produk 1.',
+                'harga' => 50000,
+                'kategori' => 'Sein',
+                'is_diskon' => false,
+            ],
+            [
+                'nama_produk' => 'Produk 1',
+                'gambar' => 'images/produk1.jpg',
+                'deskripsi' => 'Ini Deskripsi Produk 1.',
+                'harga' => 50000,
+                'kategori' => 'Sein',
+                'is_diskon' => false,
+            ],
         ];
 
         foreach ($products as $produk) {
