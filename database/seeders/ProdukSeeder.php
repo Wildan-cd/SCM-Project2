@@ -140,7 +140,7 @@ class ProdukSeeder extends Seeder
             ],
             [
                 'nama_produk' => 'Selebor Tengah GL100 Plastik ABS',
-                'gambar' => 'public/images/SeleborTengahGL100.jpg',
+                'gambar' => 'images/SeleborTengahGL100.jpg',
                 'deskripsi' => 'Slebor tengah ini dibuat dari bahan plastik ABS lentur dan tahan benturan, cocok digunakan untuk GL 100 dan GL 125. Produk ini berfungsi sebagai sambungan kolong belakang, membantu melindungi bagian bawah motor dari cipratan udara dan kotoran. Desainnya sangat presisi menyerupai part original, dengan kualitas buatan dalam negeri. Tidak mudah pecah dan mudah dipasang pada rangka motor. Ideal untuk pengguna yang menginginkan tampilan rapi serta perlindungan tambahan di bagian bawah motor. Cocok untuk pemulihan maupun pemakaian harian.',
                 'harga' => 60000,
                 'kategori' =>'Spakbor',
