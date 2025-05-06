@@ -39,25 +39,30 @@
     </section>
 
     <section class="sparepart" id="sparepart">
-        <div class="sparepart-container">
-            <h2>Penyediaan Sparepart Motor Klasik</h2>
-            <p>Septa Classic Motor menyediakan berbagai sparepart berkualitas untuk motor klasik Honda seperti CB, GL, 
-                Megapro, dan Tiger, mulai dari komponen mesin, kelistrikan, hingga aksesoris bodi, termasuk pilihan 
-                custom atau retro. Kami bekerja sama dengan supplier terpercaya untuk memastikan ketersediaan sparepart 
-                original maupun variasi yang teruji. Tim kami juga siap memberikan konsultasi agar Anda mendapatkan 
-                produk terbaik sesuai karakter motor, gaya berkendara, dan anggaran, karena kami percaya motor klasik 
-                Anda layak mendapatkan kualitas terbaik.</p>
-            <div class="sparepart-grid">
-                <div class="sparepart-item">
-                    <img src="images/sparepart5.jpg" alt="Layanan 1">
-                </div>
-                <div class="sparepart-item">
-                    <img src="images/sparepart1.jpg" alt="Layanan 2">
-                </div>
-                <div class="sparepart-item">
-                    <img src="images/sparepart4.jpg" alt="Layanan 3">
-                </div>
-            </div>            
+        <div class="product-container">
+          <!-- Galeri Foto (Kiri) -->
+          <div class="product-gallery">
+            <img src="images/sparepart5.jpg" alt="Sparepart Motor Klasik" class="main-image">
+          </div>
+      
+          <!-- Detail Produk (Kanan) -->
+          <div class="product-info">
+            <h2 class="product-title">Penyediaan Sparepart Motor Klasik</h2>
+            <p class="product-description">
+              Septa Classic Motor menyediakan berbagai sparepart berkualitas untuk motor klasik Honda seperti CB, GL, 
+              Megapro, dan Tiger, mulai dari komponen mesin, kelistrikan, hingga aksesoris bodi, termasuk pilihan 
+              custom atau retro. Kami bekerja sama dengan supplier terpercaya untuk memastikan ketersediaan sparepart 
+              original maupun variasi yang teruji. Tim kami juga siap memberikan konsultasi agar Anda mendapatkan 
+              produk terbaik sesuai karakter motor, gaya berkendara, dan anggaran, karena kami percaya motor klasik 
+              Anda layak mendapatkan kualitas terbaik.
+            </p>
+      
+            <!-- Gambar Tambahan (opsional, seperti galeri bawah) -->
+            <div class="product-actions">
+              <img src="images/sparepart1.jpg" alt="sparepart 1" class="thumbnail">
+              <img src="images/sparepart4.jpg" alt="sparepart 2" class="thumbnail">
+            </div>
+          </div>
         </div>
     </section>
 
@@ -87,31 +92,35 @@
         </div>
     </section>
 
-    <section class="modifikasi" id="modifikasi">
-            <div class="modifikasi-container">
-            <h2>Modifikasi Sepeda Motor</h2>
-            <p>Septa Classic Motor menyediakan berbagai layanan modifikasi sepeda motor klasik dengan fleksibilitas 
-                tinggi, sesuai dengan preferensi dan visi pemilik motor. Kami menangani modifikasi mulai dari perubahan 
-                kecil seperti penggantian lampu, spion, knalpot, dan ban, hingga modifikasi besar yang melibatkan 
-                perubahan bentuk tangki, desain jok custom, serta pengubahan motor ke gaya seperti café racer, scrambler, 
-                japstyle, bratstyle, atau chopper. Proses modifikasi kami tidak hanya menitikberatkan pada tampilan 
-                estetik, tetapi juga pada aspek kenyamanan, performa mesin, dan keselamatan berkendara setelah 
-                modifikasi. Kami memberikan konsultasi desain visual awal untuk memastikan Anda mendapatkan gambaran 
-                yang jelas mengenai hasil akhir. Tim teknis dan kreatif kami siap memberikan sentuhan terbaik pada sepeda 
-                motor klasik Anda.</p>
-                <div class="modifikasi-grid">
-                    <div class="modifikasi">
-                        <img src="images/motor1.jpg" alt="modifikasi 1">
-                    </div>
-                    <div class="sparepart-item">
-                        <img src="images/motor6.jpg" alt="modifikasi 2">
-                    </div>
-                    <div class="sparepart-item">
-                        <img src="images/motor8.jpg" alt="modifikasi 3">
-                    </div>
-                </div> 
-            <div>
-    </section>
+    <section class="modifikasi-item" id="modifikasi">
+        <div class="product-container">
+          <!-- Galeri Gambar Kiri -->
+          <div class="product-gallery">
+            <img src="images/motor1.jpg" alt="Modifikasi Motor" class="main-image">
+          </div>
+      
+          <!-- Deskripsi Modifikasi -->
+          <div class="product-info">
+            <h2 class="product-title">Modifikasi Sepeda Motor</h2>
+            <p class="product-description">
+              Septa Classic Motor menyediakan berbagai layanan modifikasi sepeda motor klasik dengan fleksibilitas tinggi,
+              sesuai dengan preferensi dan visi pemilik motor. Kami menangani modifikasi mulai dari perubahan kecil seperti
+              penggantian lampu, spion, knalpot, dan ban, hingga modifikasi besar yang melibatkan perubahan bentuk tangki,
+              desain jok custom, serta pengubahan motor ke gaya seperti café racer, scrambler, japstyle, bratstyle, atau
+              chopper. Proses modifikasi kami tidak hanya menitikberatkan pada tampilan estetik, tetapi juga pada aspek
+              kenyamanan, performa mesin, dan keselamatan berkendara setelah modifikasi. Kami memberikan konsultasi desain
+              visual awal untuk memastikan Anda mendapatkan gambaran yang jelas mengenai hasil akhir. Tim teknis dan kreatif
+              kami siap memberikan sentuhan terbaik pada sepeda motor klasik Anda.
+            </p>
+      
+            <!-- Galeri Thumbnail -->
+            <div class="product-actions">
+              <img src="images/motor6.jpg" alt="Galeri Modifikasi 1" class="thumbnail">
+              <img src="images/motor8.jpg" alt="Galeri Modifikasi 2" class="thumbnail">
+            </div>
+          </div>
+        </div>
+      </section> 
 
     <section class="layanan-section" id="layanan">
         <div class="layanan-container">
@@ -132,5 +141,6 @@
     @include('components.footer')
 
     <script src="/scm_new/js/script1.js"></script>
+    <script src="{{asset('js/layanan.js')}}"></script>
 </body>
 </html>
