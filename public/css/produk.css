@@ -106,7 +106,7 @@ header nav ul li a:hover {
 }
 
 .kategori-toggle:hover {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     color: #f39c12;
 }
 
@@ -232,10 +232,10 @@ footer {
     }
 }
 
-.products {
+/* .products {
     padding-bottom: 150px;
     padding-right: 0;
-}
+} */
 
 @keyframes fadeInDown {
     from {
