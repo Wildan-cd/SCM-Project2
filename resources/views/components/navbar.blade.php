@@ -1,6 +1,6 @@
 <header>
     <div class="logo-container">
-        <img src="images/logo.png" alt="logo" class="logo">
+        <img src="{{ asset('images/logo.png') }}" alt="logo" class="logo">
         <h1>Septa Classic Motor</h1>
     </div>
     <nav>
