@@ -1,3 +1,4 @@
+/* Reset & Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -17,8 +18,8 @@ body {
 
 /* Header */
 header {
-    background: #333333;
-    color: #ffffff;
+    background: #333;
+    color: #fff;
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
@@ -46,16 +47,13 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
-    color: #f39c12;
-}
-
+header nav ul li a:hover,
 .layanan {
     color: #f39c12;
 }
@@ -68,11 +66,10 @@ header nav ul li a:hover {
 
 .logo-container img.logo {
     width: 40px;
-    height: auto;
     margin-right: 10px;
 }
 
-/* Layanan Section */
+/* Layanan Top */
 .layanan-top {
     background: linear-gradient(#00000099, #00000099),
                 url("../images/layanan2.jpg") center/cover no-repeat;
@@ -81,203 +78,109 @@ header nav ul li a:hover {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    color: #ffffff;
+    color: #fff;
     padding: 50px;
 }
 
-.layanan-top .overlay {
-    font-size: 5em;
-    margin-bottom: 12px;
-    animation: fadeInDown 1s ease forwards;
-}
-
 .judul-layanan {
-    position: relative;
-    z-index: 2;
-    color: #fff;
     font-size: 5em;
     font-weight: bold;
     animation: fadeInDown 1s ease forwards;
     opacity: 0;
+    z-index: 2;
 }
 
-/* Layanan Section */
+.breadcrumb {
+    padding: 1rem;
+    font-size: 1rem;
+    background: #ffffff;
+}
+
+.breadcrumb a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+/* Layanan Section General */
 .layanan-section {
-    padding: 40px;
-    background-color: #ffffff;
-    align-items: center;
+    padding: 0px 100px;
+    background-color: #fff;
+    padding-bottom: 40px;
 }
 
 .layanan-container {
-    text-align: justify;
-    padding: 20px;
     max-width: 1000px;
+    margin: 0 auto;
+    text-align: justify;
+    max-width: 1700px;
 }
 
-.layanan-container h2 {
-    font-size: 36px;
+/* Product Section Shared */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+    align-items: flex-start;
 }
 
-.layanan-container p {
-    font-size: 16px;
-}
-
-/* Sparepart Section */
-.sparepart {
-    background-color: #e6e5e5;
-    padding: 40px;
+.product-gallery .main-image {
+    width: 250px;
+    height: 100px;
+    max-width: 350px;
+    margin-top: 30px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .product-info {
     flex: 1 1 600px;
     text-align: justify;
-  }
-  
-  .product-title {
+}
+
+.product-title {
     font-size: 36px;
     margin-bottom: 10px;
-  }
-  
-  .product-description {
+}
+
+.product-description {
     font-size: 16px;
     margin-bottom: 20px;
-  }
-  
-  .product-actions {
+}
+
+.product-actions {
     display: flex;
     gap: 15px;
-  }
-  
-  .thumbnail {
-    width: 100px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-  }
-  
-  .thumbnail:hover {
-    transform: scale(1.05);
-  }
-  
-/* Restorasi Section */
-.restorasi {
-    background-color: #ffffff;
-    padding: 40px;
+    margin-top: 10px;
 }
 
-.restorasi-container {
-    text-align: justify;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.restorasi-container h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.restorasi-container p {
-    font-size: 16px;
-}
-
-.restorasi-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-}
-
-.restorasi-item {
-    width: 100%;
-    height: 180px;
-    overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.restorasi-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.restorasi-grid img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.restorasi-grid img:hover {
-    transform: scale(1.05);
-}
-
-/* Modifikasi Section */
+/* Section Background Alternating */
+.sparepart, 
 .modifikasi {
     background-color: #e6e5e5;
-    padding: 40px;
+    padding: 20px 10px;
 }
 
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
+.restorasi {
+    background-color: #fff;
+    padding: 20px 10px;
+}
+
+/* layanan footer */
+.layanan-section-footer {
+    padding: 40px 100px;
+    background-color: #fff;
+}
+
+.layanan-container-footer {
     max-width: 1000px;
     margin: 0 auto;
-    gap: 30px;
-    align-items: flex-start;
-  }
-  
-  .product-gallery {
-    flex: 1 1 300px;
-  }
-  
-  .product-gallery .main-image {
-    width: 100%;
-    border-radius: 16px;
-    margin-top: 75px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
-  .product-info {
-    flex: 1 1 600px;
     text-align: justify;
-  }
-  
-  .product-title {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  .product-description {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  .product-actions {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .thumbnail {
-    width: 100px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-  }
-  
-  .thumbnail:hover {
-    transform: scale(1.05);
-  }
+    max-width: 1700px;
+}
+
 
 /* Animations */
 @keyframes fadeInDown {
@@ -285,7 +188,6 @@ header nav ul li a:hover {
         opacity: 0;
         transform: translateY(-30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -297,7 +199,6 @@ header nav ul li a:hover {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
