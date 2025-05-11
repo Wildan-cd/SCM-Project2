@@ -173,6 +173,7 @@ header nav ul li a:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: space-between;
 }
 .product-card img {
     width: 200px;
@@ -183,7 +184,8 @@ header nav ul li a:hover {
 .product-title {
     font-weight: bold;
     margin: 1rem 0;
-    padding-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 0;
 }
 .product-card a {
     background-color: #111111;
