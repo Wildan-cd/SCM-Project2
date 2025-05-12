@@ -169,10 +169,10 @@ header nav ul li a:hover {
 .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
-    gap: 1rem; 
+    justify-content: center;
+    gap: 1rem;
     padding: 2rem 1rem;
-  }
+}
 
 .info {
     margin-bottom: 0.6rem;
@@ -217,15 +217,6 @@ header nav ul li a:hover {
     margin-top: 10px;
 }
 
-/* Footer */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-}
-
 /* Animations */
 @keyframes fadeInDown {
     from {
@@ -238,5 +229,3 @@ footer {
         transform: translateY(0);
     }
 }
-
-

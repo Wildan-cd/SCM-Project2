@@ -72,7 +72,7 @@ header nav ul li a:hover,
 /* Layanan Top */
 .layanan-top {
     background: linear-gradient(#00000099, #00000099),
-                url("../images/layanan2.jpg") center/cover no-repeat;
+        url("../images/layanan2.jpg") center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,7 +103,7 @@ header nav ul li a:hover,
 
 /* Layanan Section General */
 .layanan-section {
-    padding: 0px 100px;
+    padding: 0px 160px;
     background-color: #fff;
     padding-bottom: 40px;
 }
@@ -157,7 +157,7 @@ header nav ul li a:hover,
 }
 
 /* Section Background Alternating */
-.sparepart, 
+.sparepart,
 .modifikasi {
     background-color: #e6e5e5;
     padding: 20px 10px;
@@ -170,7 +170,7 @@ header nav ul li a:hover,
 
 /* layanan footer */
 .layanan-section-footer {
-    padding: 40px 100px;
+    padding: 40px 160px;
     background-color: #fff;
 }
 
@@ -181,23 +181,11 @@ header nav ul li a:hover,
     max-width: 1700px;
 }
 
-
 /* Animations */
 @keyframes fadeInDown {
     from {
         opacity: 0;
         transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
     }
     to {
         opacity: 1;

@@ -85,7 +85,9 @@ header nav ul li a:hover {
     margin: auto;
 }
 
-input, form select, form textarea {
+input,
+form select,
+form textarea {
     width: 100%;
     padding: 0.7rem;
     margin-bottom: 1rem;
@@ -129,13 +131,4 @@ button:hover {
 .notif-sukses {
     color: green;
     font-weight: bold;
-}
-
-/* Footer */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
 }
