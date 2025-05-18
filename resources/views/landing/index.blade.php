@@ -46,7 +46,7 @@
 <section class="contact-preview">
   <h2>Siap Jadi Bintang di Jalanan?</h2>
   <p>Dari pecinta motor klasik untuk sesama penggemar jalanan!</p>
-  <a href="https://wa.me/6282234322320" class="btn">Gaskeun Sekarang</a>
+  <a href="https://wa.me/6282234322320" class="btn">Grab Now</a>
 </section>
 
 @include('components.footer')

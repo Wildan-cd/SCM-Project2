@@ -1,249 +1,431 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f8f9fa;
 }
 
 header {
-    background: #333333;
-    color: #ffffff;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 10px #0000004d;
+  background: #333333;
+  color: #ffffff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px #0000004d;
 }
 
-header .logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    letter-spacing: 1px;
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+nav ul li {
+  margin-left: 25px;
 }
 
-header nav ul li {
-    margin-left: 25px;
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #f39c12;
+nav ul li a:hover {
+  color: #f39c12;
 }
 
 .tentang {
-    color: #f39c12;
+  color: #f39c12;
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
 }
 
 .logo-container img.logo {
-    width: 40px;
-    height: auto;
-    margin-right: 10px;
-}
-
-.about-top {
-    background: linear-gradient(#00000099, #00000099),
-        url("../images/aboutus1.jpg") center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    color: #ffffff;
-    padding: 50px;
-}
-
-.about-top h1 {
-    font-size: 5em;
-    margin-bottom: 12px;
-    animation: fadeInDown 1s ease forwards;
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
 }
 
 .breadcrumb {
-    padding: 1rem;
-    font-size: 1rem;
-    background: #ffffff;
+  padding: 1rem;
+  font-size: 1rem;
+  background: #ffffff;
 }
 
 .breadcrumb a {
-    color: #f39c12;
-    text-decoration: none;
+  color: #f39c12;
+  text-decoration: none;
+}
+
+.about-top {
+  background: linear-gradient(#00000099, #00000099),
+    url("../images/aboutus1.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #ffffff;
+  padding: 50px;
+}
+
+.about-top h1 {
+  font-size: 5em;
+  margin-bottom: 12px;
+  animation: fadeInDown 1s ease forwards;
 }
 
 .tentang-section {
-    padding: 40px 60px;
-    background-color: #ffffff;
-    align-items: center;
+  padding: 40px 60px;
+  background-color: #ffffff;
+  align-items: center;
 }
 
 .tentang-container {
-    text-align: justify;
-    padding: 2px;
-    max-width: auto;
-    margin-bottom: 60px;
+  text-align: justify;
+  padding: 2px;
+  max-width: auto;
+  margin-bottom: 60px;
 }
 
 .tentang-container h2 {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 .tentang-container p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
-/* Contact Section */
 .contact-section {
-    background-color: #eeeeee;
-    padding: 40px;
-    font-family: Arial, sans-serif;
+  background-color: #eeeeee;
+  padding: 60px;
+  font-family: Arial, sans-serif;
 }
 
 .contact-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .contact-info {
-    width: 60%;
-    padding-right: 30px;
+  width: 60%;
+  padding-right: 30px;
 }
 
 .contact-info h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
 .contact-info p {
-    color: #333333;
-    margin-bottom: 20px;
+  color: #333333;
+  margin-bottom: 20px;
 }
 
 .contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    text-decoration: none;
-    font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 .contact-item i {
-    font-size: 28px;
-    color: #333;
-    margin-right: 15px;
-    min-width: 36px;
-    text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-right: 15px;
+  min-width: 36px;
+  text-align: center;
 }
 
 .contact-item .contact-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
 }
 
 .contact-item div {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .social {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .social .icons {
-    margin-top: 10px;
-    display: flex;
-    gap: 15px;
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
 }
 
 .social .icons a i {
-    font-size: 28px;
-    color: black;
-    transition: color 0.3s ease;
+  font-size: 28px;
+  color: black;
+  transition: color 0.3s ease;
 }
 
 .social .icons a i:hover {
-    color: orange;
+  color: orange;
 }
 
 .contact-extra {
-    width: 35%;
-    border-left: 1px solid #5555559f;
-    padding-left: 30px;
+  width: 35%;
+  border-left: 1px solid #5555559f;
+  padding-left: 30px;
 }
 
 .contact-extra h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #333333;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .marketplace-icons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .marketplace-icons a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #333333;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
-    margin-bottom: 12px;
-    transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
 }
 
 .marketplace-icons a i {
-    font-size: 22px;
+  font-size: 22px;
+  margin-right: 10px;
+  color: #333;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.marketplace-icons a:hover,
+.marketplace-icons a:hover i {
+  color: #f39c12;
+}
+
+.map-container {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.responsive-map {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 3px;
+}
+
+.hamburger div {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+}
+
+/*navbar*/
+@media (max-width: 768px) {
+  .logo-container {
+    display: flex;
+    align-items: center;
+    font-size: 0.5em;
+  }
+
+  .logo-container img.logo {
+    width: 25px;
+    height: auto;
     margin-right: 10px;
-    color: #333;
-    transition: color 0.3s ease;
-    font-weight: bold;
+  }
+
+  nav {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    background-color: #333333;
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+    z-index: 10;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav.active {
+    display: flex;
+  }
 }
 
-.marketplace-icons a:hover, .marketplace-icons a:hover i {
+@media (max-width: 768px) {
+  .about-top {
+    height: 150px;
+  }
+
+  .about-top h1 {
+    font-size: 3em;
+  }
+
+  .tentang-section {
+    padding: 20px 30px;
+  }
+
+  .tentang-container {
+    margin-bottom: 30px;
+  }
+
+  .tentang-container h2 {
+    font-size: 1.3em;
+  }
+
+  .tentang-container p {
+    font-size: 0.8em;
+  }
+
+  .contact-section {
+    padding: 30px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-info {
+    width: 100%;
+    padding-right: 0px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+  }
+
+  .contact-info p {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+  }
+
+  .contact-item {
+    margin-bottom: 10px;
+    font-size: 1em;
+  }
+
+  .contact-item i {
+    font-size: 1em;
+    margin-right: 7px;
+  }
+
+  .contact-item div {
+    font-size: 0.8em;
+  }
+
+  .social {
+    margin-top: 10px;
+  }
+
+  .social h3 {
+    font-size: 1.3em;
+  }
+
+  .social .icons {
+    margin-top: 5px;
+    display: flex;
+    gap: 15px;
+  }
+
+  .social .icons a i {
+    font-size: 1em;
+  }
+
+  .social .icons a i:hover {
+    color: orange;
+  }
+
+  .contact-extra {
+    width: 90%;
+    border-top: 1px solid #5555559f;
+    border-left: 1px solid #eeeeee;
+    padding-left: 0px;
+    padding-top: 10px;
+  }
+
+  .contact-extra h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+  }
+
+  .marketplace-icons {
+    gap: 0;
+  }
+
+  .marketplace-icons a {
+    font-size: 0.8em;
+    margin-bottom: 12px;
+  }
+
+  .marketplace-icons a i {
+    font-size: 1em;
+  }
+
+  .marketplace-icons a:hover,
+  .marketplace-icons a:hover i {
     color: #f39c12;
+  }
+
+  .map-container {
+    height: 25vh;
+  }
 }
 
-/* Animations */
 @keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
