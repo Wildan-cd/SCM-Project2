@@ -21,7 +21,7 @@
   font-size: 16px;
 }
 
-.social-media a:hover{
+.social-media a:hover {
   color: orange;
   transition: color 0.3s ease;
 }
