@@ -1,11 +1,13 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <footer class="footer">
   <div class="footer-content">
     <div class="social-media">
       <a href="https://www.instagram.com/septaclassicmotor/" target="_blank"><i class="fab fa-instagram"></i> @septaclassicmotor</a>
-      <a href="https://web.facebook.com/septaclassicmotor" target="_blank"><i class="fab fa-facebook"></i> Septa Classic Motor</a>
       <a href="https://www.tiktok.com/@septaclassic" target="_blank"><i class="fab fa-tiktok"></i> septaclassic</a>
+      <a href="https://web.facebook.com/septaclassicmotor" target="_blank"><i class="fab fa-facebook"></i> Septa Classic Motor</a>
     </div>
 
     <div class="store-info">
