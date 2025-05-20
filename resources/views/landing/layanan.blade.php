@@ -15,27 +15,27 @@
   <a href="{{ route('index') }}">Home</a> &rsaquo; Service
 </div>
 
-<section class="portfolio-section">
-  <!-- <h2 class="portfolio-title">Layanan</h2>
-  <p class="portfolio-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel perferendis delectus consequuntur velit ullam ducimus voluptatibus explicabo error provident sint quisquam reiciendis, molestiae amet quo et unde aperiam commodi aspernatur?</p> -->
+<section class="layanan-section">
+  <!-- <h2 class="layanan-title">Layanan</h2>
+  <p class="layanan-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel perferendis delectus consequuntur velit ullam ducimus voluptatibus explicabo error provident sint quisquam reiciendis, molestiae amet quo et unde aperiam commodi aspernatur?</p> -->
 
   <div class="filter-buttons">
-    <button class="active" data-filter="all">All</button>
-    <button data-filter="spareparts">Spareparts</button>
-    <button data-filter="restoration">Restoration</button>
-    <button data-filter="modification">Modification</button>
-  </div>
+     <a href="{{ route('landing.layanan') }}">All</a>
+    @foreach (['Spareparts', 'Restoration', 'Modification'] as $cat)
+        <a href="{{ route('landing.layanan', ['kategori' => $cat]) }}" class="{{ request('kategori') === $cat ? 'active' : '' }}">
+      {{ $cat }}</a>
+        @endforeach
+  </div>  
 
-  <div class="portfolio-grid">
-    <div class="portfolio-item" data-category="spareparts"><img src="images/sparepart11.jpg" alt="Spareparts"></div>
-    <div class="portfolio-item" data-category="restoration"><img src="images/resto41.jpg" alt="Restoration"></div>
-    <div class="portfolio-item" data-category="modification"><img src="images/motor1.1.jpg" alt="Modification"></div>
-    <div class="portfolio-item" data-category="app"><img src="img4.jpg" alt="Portfolio App"></div>
-    <div class="portfolio-item" data-category="card"><img src="img5.jpg" alt="Portfolio Card"></div>
-    <div class="portfolio-item" data-category="web"><img src="img6.jpg" alt="Portfolio Web"></div>
+  <div class="layanan-grid">
+    @foreach ($layanan as $item)
+    <div class="layanan-item">
+      <img src="{{ asset('images/'.$item->gambar) }}" />
+    </div>
+    @endforeach
   </div>
 </section>
 
 @include('components.footer')
 
-<script src="{{ asset('js/portofolio.js') }}"></script>
+<script src="{{ asset('js/layanan.js') }}"></script>
