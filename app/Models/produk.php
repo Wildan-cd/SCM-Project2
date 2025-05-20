@@ -15,6 +15,6 @@ class produk extends Model
         'deskripsi',
         'harga',
         'kategori',
-        'is_diskon',
+        //'is_diskon',
     ];
 }

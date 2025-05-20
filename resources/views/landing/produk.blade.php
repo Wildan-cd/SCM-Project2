@@ -41,7 +41,7 @@
   <div class="product-grid">
     @foreach ($produk as $item)
     <div class="product-card">
-      <img src="{{ asset('/'.$item->gambar) }}" alt="{{ $item->nama_produk }}" />
+      <img src="{{ asset('storage/'.$item->gambar) }}" alt="{{ $item->nama_produk }}" />
       <div class="product-title">{{ $item->nama_produk }}</div>
       <a class="btn" href="{{ route('landing.detail', $item->id) }}">Detail</a>
     </div>

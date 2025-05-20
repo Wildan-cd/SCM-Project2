@@ -13,7 +13,7 @@
 
 <div class="product-container">
   <div class="product-gallery">
-    <img src="{{ asset($produk->gambar) }}" alt="{{ $produk->nama_produk }}" class="main-image">
+    <img src="{{ asset('images/'.$produk->gambar) }}" alt="{{ $produk->nama_produk }}" class="main-image">
   </div>
 
   <div class="product-info">
