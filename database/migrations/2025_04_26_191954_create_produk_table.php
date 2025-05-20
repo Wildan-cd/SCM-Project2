@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nama_produk');
             $table->string('gambar');
-            $table->text('deskripsi');
             $table->integer('harga');
+            $table->integer('harga_diskon')->nullable()->default(null);
             $table->enum('kategori', [
                 'Sein',
                 'Lampu Depan',

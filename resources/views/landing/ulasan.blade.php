@@ -1,6 +1,6 @@
-<title>Septa Classic Motor</title>
 <link rel="stylesheet" href="{{ asset('css/ulasan.css') }}">
-<link rel="shortcut icon" href="images/logo.png" type="images/logo.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
 @include('components.navbar')
 
@@ -15,8 +15,12 @@
 <section class="daftar-ulasan">
   <div class="header-ulasan">
     <h2>Ulasan Pelanggan</h2>
-    <a href="{{ route('landing.form_ulasan') }}" class="btn">+ Add Review</a>
   </div>
+  
+  <div class="btn">
+    <a type="button" class="btn btn-dark justify-content-end" href="{{ route('landing.form_ulasan') }}">+ Add Review</a>
+  </div>
+
   @if (session('success'))
   <div class="alert alert-success">
     {{ session('success') }}
@@ -40,6 +44,18 @@
     </div>
     @endforeach
   </div>
+
+  <div class="d-flex justify-content-center mt-4">
+    {{ $data->links() }}
+  </div>
 </section>
 
 @include('components.footer')
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>

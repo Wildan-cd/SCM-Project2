@@ -1,6 +1,4 @@
-<title>Septa Classic Motor</title>
 <link rel="stylesheet" href="{{ asset('css/produk.css') }}">
-<link rel="shortcut icon" href="images/logo.png" type="images/logo.png">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
@@ -13,43 +11,70 @@
   <a href="{{ route('index') }}">Home</a> &rsaquo; Products
 </div>
 
-<!-- <nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <form action="/search" class="d-flex" role="search" method="GET" a>
-      <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-  </div>
-</nav> -->
-
-<div class="Products">
-  <div class="container">
-    <div class="produk-category-wrapper">
-      <button class="kategori-toggle" onclick="toggleKategori()">☰ Kategori</button>
-      <div class="produk-box" id="kategoriMenu">
-        <a href="{{ route('landing.produk') }}">Semua Produk</a>
-        <a href="{{ route('landing.produk', ['kategori' => 'Diskon']) }}">Diskon</a>
-        @foreach (['Lampu Depan', 'Lampu Belakang', 'Sein', 'Spakbor', 'Keranjang', 'Tangki', 'Footstep'] as $cat)
-        <a href="{{ route('landing.produk', ['kategori' => $cat]) }}">{{ $cat }}</a>
+<div class="mb-4 text-center">
+  <div class="d-flex justify-content-end">
+    <div class="dropdown d-inline-block me-5">
+      <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownKategori" data-bs-toggle="dropdown" aria-expanded="false">
+        &#9776; Kategori
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownKategori">
+        <li>
+          <a class="dropdown-item {{ $kategori === null ? 'active' : '' }}"
+            href="{{ route('landing.produk') }}">
+            Semua Produk
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item {{ $kategori === 'Diskon' ? 'active' : '' }}"
+            href="{{ route('landing.produk', ['kategori' => 'Diskon']) }}">
+            Diskon
+          </a>
+        </li>
+        @foreach($semua_kategori as $kat)
+        <li>
+          <a class="dropdown-item {{ $kategori === $kat ? 'active' : '' }}"
+            href="{{ route('landing.produk', ['kategori' => $kat]) }}">
+            {{ ucfirst($kat) }}
+          </a>
+        </li>
         @endforeach
-      </div>
+      </ul>
     </div>
   </div>
 </div>
 
-<div class="row container mt-3">
-  <div class="product-grid">
-    @foreach ($produk as $item)
-    <div class="product-card">
-      <img src="{{ asset('/'.$item->gambar) }}" alt="{{ $item->nama_produk }}" />
-      <div class="product-title">{{ $item->nama_produk }}</div>
-      <a class="btn" href="{{ route('landing.detail', $item->id) }}">Detail</a>
+<div class="container py-4">
+  <div class="row g-4">
+    @foreach($produk as $item)
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card h-100 shadow-sm produk-card">
+        <img src="{{ asset('images/'.$item->gambar) }}" class="card-img-top img-produk" alt="{{ $item->nama_produk }}">
+        <div class="card-body d-flex flex-column">
+          <h6 class="card-title">{{ $item->nama_produk }}</h6>
+          <p class="card-text mb-1 text-danger fw-bold mt-auto">
+            Rp{{ number_format($item->harga_diskon ?? $item->harga, 0, ',', '.') }}
+            @if($item->is_diskon)
+            <span class="text-muted text-decoration-line-through fw-normal ms-1">
+              Rp{{ number_format($item->harga, 0, ',', '.') }}
+            </span>
+            @endif
+          </p>
+          @php
+            $pesan = "Halo, saya tertarik dengan produk " . $item->nama_produk . ", apakah tersedia?";
+            $link = 'https://wa.me/send?phone=6282234322320&text=' . urldecode($pesan);
+          @endphp
+          <a href="{{ $link }}" target="_blank" class="btn btn-success mt-2">
+            Beli via WhatsApp
+          </a>
+        </div>
+      </div>
     </div>
     @endforeach
   </div>
-  <div class="d-flex justify-content-center mt-4">
-    {{ $produk->links('pagination::bootstrap-5') }}
-  </div>
+</div>
+
+<div class="mt-4 d-flex justify-content-center">
+  {{ $produk->withQueryString()->links() }}
 </div>
 
 @include('components.footer')

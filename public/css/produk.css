@@ -1,240 +1,92 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: #f8f9fa;
-}
-
-/* Header */
-header {
-    background: #333333;
-    color: #ffffff;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 10px #0000004d;
-}
-
-header .logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-header nav ul li {
-    margin-left: 25px;
-}
-
-header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #f39c12;
-}
-
-.produk {
-    color: #f39c12;
-}
-
-/* Logo */
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo-container img.logo {
-    width: 40px;
-    height: auto;
-    margin-right: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f8f9fa;
 }
 
 .produk-top {
-    background: linear-gradient(#00000099, #00000099),
-        url("../images/resto3.jpg") center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    color: #ffffff;
-    padding: 50px;
-    font-weight: bold;
-}
-
-.produk-category-wrapper {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0;
-    position: relative;
-}
-
-.kategori-toggle {
-    background-color: #ffffff;
-    border: none;
-    align-items: right;
-    font-size: 1em;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #333;
-    transition: background-color 0.3s;
-}
-
-.kategori-toggle:hover {
-    background-color: #ffffff;
-    color: #f39c12;
-}
-
-.produk-box {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-.produk-box a {
-    display: block;
-    padding: 8px 16px;
-    color: #333;
-    text-decoration: none;
-    border-bottom: 1px solid #eee;
-}
-
-.produk-box a:hover {
-    background-color: #f0f0f0;
+  background: linear-gradient(#00000099, #00000099),
+    url("../images/resto3.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #ffffff;
+  padding: 50px;
+  font-weight: bold;
 }
 
 .produk-top h1 {
-    font-size: 5em;
-    font-weight: bold;
-    margin-bottom: 12px;
-    animation: fadeInDown 1s ease forwards;
+  font-size: 5em;
+  margin-bottom: 12px;
+  animation: fadeInDown 1s ease forwards;
 }
+
 .breadcrumb {
-    padding: 1rem;
-    margin-top: 12px;
-    margin-left: 12px;
-    font-size: 1rem;
+  padding: 1rem;
+  margin-top: 12px;
+  margin-left: 12px;
+  font-size: 1rem;
 }
+
 .breadcrumb a {
-    color: #f39c12;
-    text-decoration: none;
-}
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 7.5rem;
-    padding: 0 40px;
-    max-width: 650px;
-}
-.product-card {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease-in-out;
-    height: 100%;
-    max-width: 250px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-between;
-}
-.product-card img {
-    width: 200px;
-    height: 250px;
-    border-radius: 8px;
+  color: #f39c12;
+  text-decoration: none;
 }
 
-.product-title {
-    font-weight: bold;
-    margin: 1rem 0;
-    margin-bottom: 1rem;
-    padding-top: 0;
-}
-.product-card a {
-    background-color: #111111;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
+body {
+  overflow-x: hidden;
 }
 
-.product-card a:hover {
-    background: #f39c12;
-    transform: translateY(-2px);
+.dropdown-menu .dropdown-item.active,
+.dropdown-menu .dropdown-item:active {
+  background-color: #333;
+  color: #fff;
 }
 
-.btn {
-    display: inline-block;
-    background: #111111;
-    color: #f39c12;
-    padding: 12px 28px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1em;
-    transition: all 0.3s ease;
-    width: 200px;
+.produk-card {
+  transition: transform 0.2s;
 }
 
-.btn:hover {
-    background: #f39c12;
-    transform: translateY(-2px);
+.produk-card:hover {
+  transform: translateY(-5px);
 }
 
-.flex-basis-full {
-    flex-basis: 100%;
+.produk-card {
+  padding: 15px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.img-produk {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .row.produk-wrapper {
+    padding: 0 30px;
+  }
 }
 
 /* Animations */
 @keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-/* .products {
-    padding-bottom: 150px;
-    padding-right: 0;
-} */

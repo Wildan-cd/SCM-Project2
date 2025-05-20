@@ -29,7 +29,7 @@ class LandingController extends Controller
 
     public function produk(Request $request)
     {
-        $kategori = $request->query('kategori');
+      $kategori = $request->query('kategori');
         $query = produk::query();
 
         if ($kategori) {
@@ -39,9 +39,11 @@ class LandingController extends Controller
                 $query->where('kategori', $kategori);
             }
         }
-
+        
+        $semua_kategori = produk::select('kategori')->distinct()->pluck('kategori');
         $produk = $query->paginate(8);
-        return view('landing.produk', compact('produk', 'kategori'));
+        
+        return view('landing.produk', compact('produk', 'kategori', 'semua_kategori'));
     }
 
     public function detail($id)
@@ -62,8 +64,8 @@ class LandingController extends Controller
 
     public function ulasan()
     {
-        $data = ulasan::get();
-        return view('landing.ulasan', ['data'=>$data]);
+        $data = ulasan::orderBy('tanggal', 'desc')->paginate(6);
+        return view('landing.ulasan', compact('data'));
     }
     
     public function form_ulasan()
