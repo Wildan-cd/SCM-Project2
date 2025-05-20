@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\produk;
+use App\Models\layanan;
 use App\Models\ulasan;
 use Carbon\Carbon;
 //use Illuminate\Container\Attributes\DB;
@@ -55,9 +56,17 @@ class LandingController extends Controller
         return view('landing.tentang');
     }
 
-    public function layanan()
+    public function layanan(Request $request)
     {
-        return view('landing.layanan');
+        $kategori = $request->query('kategori');
+        $query = layanan::query();
+
+        if ($kategori) {
+            $query->where('kategori', $kategori);
+        }
+
+        $layanan = $query->get();
+        return view('landing.layanan', compact('layanan', 'kategori'));
     }
 
     public function ulasan()
@@ -71,16 +80,16 @@ class LandingController extends Controller
         return view('landing.form_ulasan');
     }
 
-    public function search(Request $request)
-    {
-        $search = $request->search;
+    // public function search(Request $request)
+    // {
+    //     $search = $request->search;
 
-        $result = DB::table('produk')
-            ->where('nama_produk', 'like', '%' . $search . '%')
-            ->paginate();
+    //     $result = DB::table('produk')
+    //         ->where('nama_produk', 'like', '%' . $search . '%')
+    //         ->paginate();
 
-        return view('landing.produk', ['show' => $result]);
-    }
+    //     return view('landing.produk', ['show' => $result]);
+    // }
     /**
      * Show the form for creating a new resource.
      */

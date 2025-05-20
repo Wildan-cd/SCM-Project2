@@ -1,5 +1,5 @@
 const filterButtons = document.querySelectorAll(".filter-buttons button");
-const portfolioItems = document.querySelectorAll(".portfolio-item");
+const serviceItems = document.querySelectorAll(".layanan-item");
 
 filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -9,7 +9,7 @@ filterButtons.forEach((button) => {
 
         const filter = button.getAttribute("data-filter");
 
-        portfolioItems.forEach((item) => {
+        serviceItems.forEach((item) => {
             const category = item.getAttribute("data-category");
             if (filter === "all" || category === filter) {
                 item.style.display = "block";
