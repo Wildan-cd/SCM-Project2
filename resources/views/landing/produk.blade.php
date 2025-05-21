@@ -48,7 +48,7 @@
     @foreach($produk as $item)
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
       <div class="card h-100 shadow-sm produk-card">
-        <img src="{{ asset('images/'.$item->gambar) }}" class="card-img-top img-produk" alt="{{ $item->nama_produk }}">
+        <img src="{{ asset('storage/'.$item->gambar) }}" class="card-img-top img-produk" alt="{{ $item->nama_produk }}">
         <div class="card-body d-flex flex-column">
           <h6 class="card-title">{{ $item->nama_produk }}</h6>
           <p class="card-text mb-1 text-danger fw-bold mt-auto">
@@ -61,7 +61,7 @@
           </p>
           @php
             $pesan = "Halo, saya tertarik dengan produk " . $item->nama_produk . ", apakah tersedia?";
-            $link = 'https://wa.me/send?phone=6282234322320&text=' . urldecode($pesan);
+            $link = 'https://wa.me/send?phone=6282234322320&text=' . urlencode($pesan);
           @endphp
           <a href="{{ $link }}" target="_blank" class="btn btn-success mt-2">
             Beli via WhatsApp
@@ -80,3 +80,11 @@
 @include('components.footer')
 
 <script src="{{ asset('js/script.js') }}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800, 
+    once: true 
+  });
+</script>

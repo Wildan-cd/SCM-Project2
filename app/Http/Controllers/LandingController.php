@@ -49,7 +49,10 @@ class LandingController extends Controller
     public function detail($id)
     {
         $produk = produk::findOrFail($id);
-        return view('landing.detail', compact('produk'));
+        $pesan = "Halo, saya ingin membeli " . $produk->nama_produk . ", apakah tersedia?";
+        $link = "https://wa.me/6282293831726?text=" . urlencode($pesan);
+
+        return view('landing.detail', compact('produk','link'));
     }
 
     public function tentang()
@@ -71,17 +74,6 @@ class LandingController extends Controller
     public function form_ulasan()
     {
         return view('landing.form_ulasan');
-    }
-
-    public function search(Request $request)
-    {
-        $search = $request->search;
-
-        $result = DB::table('produk')
-            ->where('nama_produk', 'like', '%' . $search . '%')
-            ->paginate();
-
-        return view('landing.produk', ['show' => $result]);
     }
     /**
      * Show the form for creating a new resource.
