@@ -21,7 +21,7 @@
       </ul>
     </div>
     @endif
-    <form action="{{ route('admin.dashboard.update', $produk->id) }}" method="POST">
+    <form action="{{ route('admin.dashboard.update', $produk->id) }}" method="POST" enctype="multipart/form-data">
       @csrf
       @method('PUT')
       <label>Nama Produk:</label>
