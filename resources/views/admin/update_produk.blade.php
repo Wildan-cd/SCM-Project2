@@ -5,7 +5,7 @@
 
 
 <section class="form-section">
-  <section class="form-ulasan">
+  <section class="form-update">
     <h2>Update Produk</h2>
     @if (session('success'))
     <div class="alert alert-success">

@@ -1,10 +1,10 @@
 <title>Septa Classic Motor</title>
-<link rel="stylesheet" href="{{ asset('css/form_ulasan.css') }}">
+<link rel="stylesheet" href="{{ asset('css/input_produk.css') }}">
 <link rel="shortcut icon" href="images/logo.png" type="images/logo.png">
 
 
 <section class="form-section">
-  <section class="form-ulasan">
+  <section class="form-input">
     <h2>Tambah Produk</h2>
     @if (session('success'))
     <div class="alert alert-success">
