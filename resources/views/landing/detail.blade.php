@@ -24,8 +24,8 @@
     <div class="product-sidebar">
       <div class="product-price">Rp {{ number_format($produk->harga, 0, ',', '.') }}</div>
       <div class="product-actions">
-        <a class="btn btn-whatsapp" target="_blank"
-          href="https://wa.me/6282234322320?text={{ urlencode('Halo, saya tertarik dengan produk ' . $produk->nama_produk) }}">
+        <a class="btn btn-whatsapp"
+          href="{{ $link }}">
           <i class="fab fa-whatsapp"></i> Beli via WhatsApp
         </a>
       </div>

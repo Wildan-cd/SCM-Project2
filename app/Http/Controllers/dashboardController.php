@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\produk;
+use App\Models\ulasan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -39,7 +40,7 @@ class dashboardController extends Controller
         $filename = time() . '_' . $file->getClientOriginalName();
         $path = $file->move(public_path('storage/produk'), $filename);
 
-        // Simpan path relatif (untuk nanti diakses lewat `asset('storage/produk/...')`)
+        // Simpan path relatif
         $gambarPath = 'produk/' . $filename;
 
         Produk::create([
@@ -91,20 +92,44 @@ class dashboardController extends Controller
 
     public function update(Request $request, $id) {
         if ($request->isMethod('put')) {
+            $produk = Produk::findOrFail($id);
 
             $data = [
                 'nama_produk' => $request->input('nama_produk'),
                 'harga' => $request->input('harga'),
-                'kategori' => $request->input('kategori'),
-                'is_diskon' => $request->input('is_diskon'),
-                'deskripsi' => $request->input('deskripsi'),
-                'gambar' => $request->input('gambar'),
-                
+                'kategori' => $request->input('kategori') ?? null,
+                'is_diskon' => $request->input('is_diskon') ?? null,
+                'deskripsi' => $request->input('deskripsi'),               
             ];
+
+            if ($request->hasFile('gambar')) {
+                $file = $request->file('gambar');
+                $filename = time() . '_' . $file->getClientOriginalName();
+                $file->move(public_path('storage/produk'), $filename);
+
+                // Simpan path relatif
+                $data['gambar'] = 'produk/' . $filename;
+            } else {
+                // Jika tidak ada gambar baru, gunakan gambar lama dari database
+                $data['gambar'] = $produk->gambar;
+            }
     
             produk::where('id', $id)->update($data);
         }
 
-        return redirect()->route('admin.dashboard')->with('success','Produk berhasil diperbarui.');
+        return redirect()->route('admin.produk_list')->with('success','Produk berhasil diperbarui.');
+    }
+
+    public function review()
+    {
+        $ulasan = ulasan::get();
+        return view('admin.review', ['ulasan'=>$ulasan]);
+    }
+
+    public function reviewDel($id) {
+        $ulasan=ulasan::findOrFail($id);
+        $ulasan->delete();
+
+        return redirect()->route('admin.review')->with('success','Produk berhasil dihapus.');
     }
 }

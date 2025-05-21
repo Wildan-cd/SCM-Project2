@@ -34,6 +34,8 @@ Route::post('dashboard', [dashboardController::class, 'add_produk']);
 
 Route::delete('produk_list/{id}', [dashboardController::class, 'delete'])->name('admin.produk.delete');
 
+Route::delete('review/{id}', [dashboardController::class, 'reviewDel'])->name('admin.review.delete');
+
 Route::get('input_produk', [dashboardController::class, 'input'])->name('admin.input_produk');
 
 Route::get('update_produk/{id}', [dashboardController::class, 'edit'])->name('admin.update_produk');
