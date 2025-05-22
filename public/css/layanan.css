@@ -11,56 +11,6 @@ body {
   background: #f8f9fa;
 }
 
-header {
-  background: #333333;
-  color: #ffffff;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 10px #0000004d;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin-left: 25px;
-}
-
-nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #f39c12;
-}
-
-.layanan {
-  color: #f39c12;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  font-size: 1em;
-}
-
-.logo-container img.logo {
-  width: 40px;
-  height: auto;
-  margin-right: 10px;
-}
-
 .breadcrumb {
   padding: 1rem;
   font-size: 1rem;
@@ -73,98 +23,78 @@ nav ul li a:hover {
 }
 
 .layanan-top {
-    background: linear-gradient(#00000099, #00000099),
-        url("../images/layanan2.jpg") center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    color: #fff;
-    padding: 50px;
+  background: linear-gradient(#00000099, #00000099),
+    url("../images/layanan2.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  padding: 50px;
 }
 
 .judul-layanan {
-    font-size: 5em;
-    font-weight: bold;
-    animation: fadeInDown 1s ease forwards;
-    opacity: 0;
-    z-index: 2;
+  font-size: 5em;
+  font-weight: bold;
+  animation: fadeInDown 1s ease forwards;
+  opacity: 0;
+  z-index: 2;
 }
 
-.portfolio-section {
+.layanan-section {
   padding: 40px 20px;
   max-width: 1200px;
   margin: auto;
 }
 
-/* .portfolio-title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.portfolio-title::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: #f39c12;
-  margin-top: 8px;
-}
-
-.portfolio-description {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 40px;
-} */
-
-/* Filter Buttons */
 .filter-buttons {
   display: flex;
-  gap: 20px;
-  margin-bottom: 40px;
+  gap: 5px;
+  margin-bottom: 50px;
+  justify-content: center;
 }
 
-.filter-buttons button {
+.filter-buttons a {
+  padding: 8px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #333333;
+  background-color: #f8f9fa;
+  transition: all 0.2s ease;
   font-size: 1em;
-  padding: 8px 20px;
-  border: none;
-  border-radius: 20px;
-  background-color: transparent;
-  color: #333;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.filter-buttons button.active,
-.filter-buttons button:hover {
-  background-color: #333333;
-  color: #fff;
+.filter-buttons a+a {
+  margin-left: 8px;
+  font-size: 1em;
+}
+
+.filter-buttons a.active,
+.filter-buttons a:hover {
+  background-color: #000000;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
-/* Portfolio Grid */
-.portfolio-grid {
+.layanan-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
 }
 
-.portfolio-item {
+.layanan-item {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
 
-.portfolio-item:hover {
-    transform: translateY(-5px);
+.layanan-item:hover {
+  transform: translateY(-5px);
 }
 
-.portfolio-item img {
+.layanan-item img {
   width: 100%;
   height: auto;
   display: block;
@@ -224,6 +154,102 @@ nav ul li a:hover {
   nav.active {
     display: flex;
   }
+}
+
+@media (max-width: 768px) {
+  .layanan-top {
+    background: linear-gradient(#00000099, #00000099),
+      url("../images/layanan2.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    padding: 50px;
+  }
+
+  .judul-layanan {
+    font-size: 3em;
+    font-weight: bold;
+    animation: fadeInDown 1s ease forwards;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  .layanan-section {
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  /* Filter Buttons */
+  .filter-buttons {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  .filter-buttons a {
+    padding: 4px 8px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #333333;
+    background-color: #f8f9fa;
+    transition: all 0.2s ease;
+    font-size: 0.8em;
+  }
+
+  .filter-buttons a+a {
+    margin-left: 8px;
+    font-size: 0.8em;
+  }
+
+  /* 
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background-color: #333333;
+  color: #fff;
+} */
+
+  .filter-buttons a.active,
+  .filter-buttons a:hover {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+
+  /* Portfolio Grid */
+  .layanan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    grid-template-columns: repeat(2, auto);
+    padding: 10px;
+  }
+
+  .layanan-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .layanan-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .layanan-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
 }
 
 @keyframes fadeInDown {

@@ -14,18 +14,18 @@
 
 <section class="tentang-section" id="tentang_kami">
   <div class="tentang-container">
-    <h2>Tentang Septa Classic Motor</h2>
-    <p>Bengkel spesialis yang menyediakan beragam suku cadang (sparepart) dan komponen variasi untuk sepeda motor, dengan penekanan khusus pada unit-unit Honda klasik seperti CB, GL Series, Megapro, dan Tiger. Setiap produk yang kami tawarkan dipilih secara cermat untuk memastikan kualitas, ketahanan, serta kesesuaian dengan karakter motor klasik pelanggan kami. <br> Selain penyediaan komponen, kami juga menawarkan layanan profesional untuk berbagai jenis proyek sepeda motor, meliputi proses restorasi guna mengembalikan tampilan dan performa kendaraan ke kondisi optimalnya, maupun modifikasi yang disesuaikan dengan selera serta kebutuhan estetika dan fungsional pemilik kendaraan. <br> Dengan dukungan tenaga ahli berpengalaman dan komitmen terhadap kualitas, Septa Classic Motor hadir sebagai mitra terpercaya bagi para pecinta motor klasik yang menginginkan hasil pengerjaan yang presisi, rapi, dan bernilai tinggi.</p>
+    <h2 data-aos="fade-up">Tentang Septa Classic Motor</h2>
+    <p data-aos="fade-up" data-aos-delay="100">Bengkel spesialis yang menyediakan beragam suku cadang (sparepart) dan komponen variasi untuk sepeda motor, dengan penekanan khusus pada unit-unit Honda klasik seperti CB, GL Series, Megapro, dan Tiger. Setiap produk yang kami tawarkan dipilih secara cermat untuk memastikan kualitas, ketahanan, serta kesesuaian dengan karakter motor klasik pelanggan kami. <br> Selain penyediaan komponen, kami juga menawarkan layanan profesional untuk berbagai jenis proyek sepeda motor, meliputi proses restorasi guna mengembalikan tampilan dan performa kendaraan ke kondisi optimalnya, maupun modifikasi yang disesuaikan dengan selera serta kebutuhan estetika dan fungsional pemilik kendaraan. <br> Dengan dukungan tenaga ahli berpengalaman dan komitmen terhadap kualitas, Septa Classic Motor hadir sebagai mitra terpercaya bagi para pecinta motor klasik yang menginginkan hasil pengerjaan yang presisi, rapi, dan bernilai tinggi.</p>
   </div>
 </section>
 
 <section class="contact-section">
   <div class="contact-container">
     <div class="contact-info">
-      <h2>Kontak Kami</h2>
-      <p>Untuk lebih detail terkait produk ataupun lainnya, anda bisa menghubungi atau mengunjungi kami di toko offline.</p>
+      <h2 data-aos="fade-up">Kontak Kami</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Untuk lebih detail terkait produk ataupun lainnya, anda bisa menghubungi atau mengunjungi kami di toko offline.</p>
 
-      <div class="contact-item">
+      <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
         <i class="fa-solid fa-location-dot"></i>
         <div>
           <strong>VISIT US</strong><br>
@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div class="contact-item">
+      <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
         <i class="fa-solid fa-phone"></i>
         <div>
           <strong>CALL US</strong><br>
@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <div class="contact-item">
+      <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
         <i class="fa-solid fa-envelope"></i>
         <div>
           <strong>EMAIL US</strong><br>
@@ -52,8 +52,8 @@
       <hr>
 
       <div class="social">
-        <h3>FOLLOW US</h3>
-        <div class="icons">
+        <h3 data-aos="fade-up" data-aos-delay="100">FOLLOW US</h3>
+        <div class="icons" data-aos="fade-up" data-aos-delay="100">
           <a href="https://www.instagram.com/septaclassicmotor/" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="https://www.tiktok.com/@septaclassic" target="_blank"><i class="fab fa-tiktok"></i></a>
           <a href="https://web.facebook.com/septaclassicmotor" target="_blank"><i class="fa-brands fa-facebook"></i></a>
@@ -63,8 +63,8 @@
     </div>
 
     <div class="contact-extra">
-      <h3>MARKETPLACE</h3>
-      <div class="marketplace-icons">
+      <h3 data-aos="fade-up" data-aos-delay="100">MARKETPLACE</h3>
+      <div class="marketplace-icons" data-aos="fade-up" data-aos-delay="100">
         <a href="https://shopee.co.id/kwbmotorclassic" target="_blank"><i class="fa-solid fa-store"></i> Shopee</a>
         <a href="https://www.tokopedia.com/septa-classic-motor" target="_blank"><i class="fa-solid fa-store"></i>Tokopedia</a>
       </div>
@@ -82,3 +82,11 @@
 </section>
 
 @include('components.footer')
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800, 
+    once: true 
+  });
+</script>

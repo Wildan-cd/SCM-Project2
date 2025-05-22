@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class produk extends Model
 {
-    public $timestamps = false;
-    protected $table = 'produk'; // Nama tabel
+  public $timestamps = false;
+  protected $table = 'produk';
 
-    protected $fillable = [
-        'nama_produk',
-        'gambar',
-        'deskripsi',
-        'harga',
-        'kategori',
-        'is_diskon',
-    ];
+  protected $fillable = [
+    'nama_produk',
+    'gambar',
+    'harga',
+    'harga_diskon',
+    'kategori',
+    //'is_diskon',
+  ];
 }
