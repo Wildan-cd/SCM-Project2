@@ -78,6 +78,18 @@ body {
   }
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.mt-4.d-flex.justify-content-center {
+  margin-top: 4rem !important;
+  z-index: 1;
+  position: relative;
+}
+
 /* Animations */
 @keyframes fadeInDown {
   from {

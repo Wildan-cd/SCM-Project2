@@ -35,8 +35,6 @@
 
 @include('components.footer')
 
-<script src="{{ asset('js/layanan.js') }}"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({

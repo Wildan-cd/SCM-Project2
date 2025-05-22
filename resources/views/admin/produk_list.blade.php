@@ -15,7 +15,7 @@
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-end">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">List Produk</li>
           </ol>
         </div>
@@ -69,11 +69,11 @@
                     <td class="d-none d-sm-table-cell">{{ $row->harga_diskon }}</td>
                     <td>
                       <div class="btn-group mb-2" role="group" aria-label="Basic mixed styles example">
-                        <a href="{{ route('admin.update_produk', ['id' => $row->id]) }}" class="btn btn-warning">Edit</a>
+                        <a href="{{ route('admin.update_produk', ['id' => $row->id]) }}" class="btn btn-warning p-2 m-1">Edit</a>
                         <form action="{{ route('admin.produk.delete', $row->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus produk ini?');">
                           @csrf
                           @method('DELETE')
-                          <button type="submit" class="btn btn-danger">Delete</button>
+                          <button type="submit" class="btn btn-danger p-2 m-1">Delete</button>
                         </form>
                       </div>
                     </td>

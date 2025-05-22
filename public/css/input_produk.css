@@ -15,19 +15,6 @@ body {
   background: #f8f9fa;
 }
 
-/* Logo */
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.logo-container img.logo {
-  width: 40px;
-  height: auto;
-  margin-right: 10px;
-}
-
-/* Form Ulasan */
 .form-section {
   display: flex;
   justify-content: center;
@@ -49,42 +36,4 @@ form textarea {
   margin-bottom: 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
-}
-
-button {
-  background-color: #333;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #f39c12;
-  transform: translateY(-2px);
-}
-
-.ulasan-item {
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 12px;
-  background: #f9f9f9;
-}
-
-.ulasan-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.rating {
-  color: #ff9900;
-  font-size: 1.2rem;
-}
-
-.notif-sukses {
-  color: green;
-  font-weight: bold;
 }

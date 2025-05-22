@@ -58,9 +58,9 @@
       <input type="file" name="gambar" >
 
       
-      <button type="submit" class="btn btn-dark">Update Produk</button>
+      <button type="submit" class="btn btn-dark mt-2">Update Produk</button>
       
     </form>
-    <a href="{{ route('admin.produk_list') }}" type="submit" class="btn btn-danger">Batal</a>
+    <a href="{{ route('admin.produk_list') }}" type="submit" class="btn btn-danger mt-2">Batal</a>
   </section>
 </section>

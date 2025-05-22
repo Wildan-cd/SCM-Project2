@@ -74,7 +74,7 @@
 </div>
 
 <div class="mt-4 d-flex justify-content-center">
-  {{ $produk->withQueryString()->links() }}
+  {{ $produk->links('vendor.pagination.bootstrap-5') }}
 </div>
 
 @include('components.footer')

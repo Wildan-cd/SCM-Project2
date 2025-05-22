@@ -1,7 +1,7 @@
 <title>Septa Classic Motor</title>
 <link rel="stylesheet" href="{{ asset('css/input_produk.css') }}">
 <link rel="shortcut icon" href="images/logo.png" type="images/logo.png">
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
 <section class="form-section">
   <section class="form-input">
@@ -53,9 +53,9 @@
       <label>Gambar:</label>
       <input type="file" name="gambar" required>
 
-    
-        <button type="submit">Tambah produk</button>
-    
+      <button type="submit" class="btn btn-dark mt-2">Tambah Produk</button>
+        
     </form>
+        <a href="{{ route('admin.produk_list') }}" type="submit" class="btn btn-danger mt-2">Batal</a>
   </section>
 </section>
